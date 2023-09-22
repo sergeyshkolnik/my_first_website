@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Portfolio Grade Challenge
+    </head>
+<body>
+    <p id = "grade"></p>
+    <form>
+        <label for = "analysis">Please enter your mark out of 25 in Analysis</label>
+
+        <input type = "number" id = "analysis" name = "analysis">
+
+        <button type = "button" onclick = "getUserInput()">Submit</button>
+
+        <label for = "implementation">Please enter your mark for implementation</label>
+
+        <input type = "number" id = "implementation" name = "implementation">
+
+        <button type = "button" onclick = "getUserInput()">Submit</button>
+
+        <label for = "design"> Please enter your mark for design</label>
+
+        <input type = "number" id = "design" name = "design">
+
+        <button type = "button" onclick = "getUserInput()">Submit</button>
+
+        <label for = "evaluation"> Please enter your mark for evaluation</label>
+
+        <input type = "number" id = "evaluation" name = "evaluation">
+
+        <button type = "button" onclick = "getUserInput()">Submit</button>
+
+    </form>
+<script>
+    function getUserInput(analysis, implementation, design, evaluation){
+        var analysis = document.getElementById("analysis");
+        var analysis = parseInt(analysis.value);
+
+
+        var design = document.getElementById("design");
+        var design = parseInt(design.value);
+
+
+        var evaluation = document.getElementById("evaluation");
+        var evaluation = parseInt(evaluation.value);
+
+
+        var implementation = document.getElementById("implementation");
+        var implementation = parseInt(implementation.value);
+
+
+
+
+        var total = implementation + evaluation + design + design;
+
+        
+        switch(total){
+           case total < 4:
+              grade = "U";
+              document.getElementById("grade").innerHTML = grade;
+            case total < 13:
+                grade = "G";
+                document.getElementById("grade").innerHTML = grade;
+    }
+}
+        
+
+    
+</script>
+</body>
+</html>
